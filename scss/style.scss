@@ -99,7 +99,15 @@ body {
     }
   }
 
-.sliders-container {
+.slider-containers {
   width: 100%;
   margin-top: 60px;
+}
+
+.slider-container {
+  margin-bottom: 60px;
+  
+  h2 {
+    text-align: center;
+  }
 }
