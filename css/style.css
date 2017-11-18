@@ -1,0 +1,82 @@
+/*common styles !!!YOU DON'T NEED THEM */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #212121;
+}
+
+.container {
+  width: 1100px;
+  margin: 50px auto 0;
+}
+.container h1 {
+  font-size: 25px;
+  text-align: center;
+}
+.container h1 span {
+  position: relative;
+  font-family: 'Merienda', cursive;
+  color: #CA9CE1;
+}
+.container h1 span:after {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  content: "~";
+  width: 100%;
+  text-align: center;
+}
+.container .subheader {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 800px;
+  margin: 30px auto 0;
+}
+.link a {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 40px;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+.link a:hover {
+  color: #CA9CE1;
+}
+.link a:last-child {
+  margin-right: 0;
+}
+.link a i {
+  color: #CA9CE1;
+  margin-right: 9px;
+  font-size: 30px;
+}
+
+.sliders-container {
+  width: 100%;
+  margin-top: 60px;
+}
