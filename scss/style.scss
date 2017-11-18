@@ -1,6 +1,12 @@
 //variables
+$slider-height: 500px;
+$text-block-width: 400px;
+
 $dark-font-color: #212121;
 $accent-font-color: #CA9CE1;
+$light-font-color: #fff;
+$text-overlay-color: #000;
+$text-overlay-opacity: 0.4;
 
 //transitions and mixins
 
@@ -29,6 +35,7 @@ body {
       size: 17px;
     }
   color: $dark-font-color;
+  line-height: 1.4;
 }
 
 .container {
@@ -109,5 +116,54 @@ body {
   
   h2 {
     text-align: center;
+  }
+}
+
+.flexbox-slider {
+  margin-top: 50px;
+}
+
+/*slide styles !!!YOU NEED THEM */
+.flexbox-slider {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  height: $slider-height;
+  
+  .flexbox-slide {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    
+    img {
+      @include position-absolute($top: 50%, $left: 50%);
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+      max-width: 400%;
+      max-height: 400%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .text-block {
+      @include position-absolute($bottom: 30px, $left: 30px);
+      max-width: $text-block-width;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: rgba($text-overlay-color, $text-overlay-opacity);
+      color: $light-font-color;
+      
+      visibility: hidden;
+      
+      h3 {
+        font: {
+          size: 20px;
+          weight: 700;
+        }
+      }
+    }
   }
 }
