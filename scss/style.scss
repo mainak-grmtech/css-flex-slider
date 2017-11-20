@@ -7,6 +7,8 @@ $accent-font-color: #CA9CE1;
 $light-font-color: #fff;
 $text-overlay-color: #000;
 $text-overlay-opacity: 0.6;
+$slide-overlay-color: #fff;
+$slide-overlay-opacity: 0.6;
 
 //transitions and mixins
 
@@ -131,12 +133,27 @@ body {
   visibility: hidden;
   
   .flexbox-slide {
+    @include transition-mix($duration: .3s);
+    
     width: 20%;
     height: 100%;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     visibility: visible;
+    
+    //overlay
+    &:after {
+      @include position-absolute($top: 0, $left: 0);
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($slide-overlay-color, $slide-overlay-opacity);
+      z-index: 2;
+      
+      opacity: 0;
+    }
     
     img {
       @include position-absolute($top: 50%, $left: 50%);
@@ -145,6 +162,7 @@ body {
       min-width: 100%;
       min-height: 100%;
       transform: translate(-50%, -50%);
+      z-index: 1;
     }
     
     .text-block {
@@ -154,6 +172,8 @@ body {
       border-radius: 5px;
       background-color: rgba($text-overlay-color, $text-overlay-opacity);
       color: $light-font-color;
+      
+      z-index: 4;
       
       visibility: hidden;
       
@@ -165,13 +185,20 @@ body {
       }
     }
   }
+  
+    &:hover {
+    
+    .flexbox-slide:hover {
+      flex-shrink: 0;
+      width: 80%;
+    }
+  }
 }
 
 /* effect 1 styles */
 .flexbox-slider.flexbox-slider-1 {
   
   .flexbox-slide {
-    @include transition-mix($duration: .3s);
     
     .text-block {
       bottom: 60px;
@@ -181,12 +208,43 @@ body {
   &:hover {
     
     .flexbox-slide:hover {
-      flex-shrink: 0;
-      width: 80%;
       
       .text-block {
         @include transition-mix($delay: .5s);
         bottom: 30px;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+/* effect 2 styles */
+.flexbox-slider.flexbox-slider-2 {
+  
+  .flexbox-slide {
+    
+    .text-block {
+        left: -60px;
+      }
+  }
+  
+  &:hover {
+    
+    .flexbox-slide:not(:hover) {
+      
+      
+      &:after {
+        @include transition-mix;
+        opacity: 1;
+      }
+    }
+    
+    .flexbox-slide:hover {
+      
+      .text-block {
+        @include transition-mix($delay: .5s, $timing: cubic-bezier(0, 0, 0, 1.82), $duration: .3s);
+        left: 30px;
         opacity: 1;
         visibility: visible;
       }
