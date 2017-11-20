@@ -128,7 +128,7 @@ body {
   max-width: 400px;
   padding: 20px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   visibility: hidden;
 }
@@ -148,8 +148,24 @@ body {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
+.flexbox-slider.flexbox-slider-1 .flexbox-slide .text-block {
+  bottom: 60px;
+}
 .flexbox-slider.flexbox-slider-1:hover .flexbox-slide:hover {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 80%;
+}
+.flexbox-slider.flexbox-slider-1:hover .flexbox-slide:hover .text-block {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  bottom: 30px;
+  opacity: 1;
+  visibility: visible;
 }

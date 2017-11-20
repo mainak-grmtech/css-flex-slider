@@ -6,7 +6,7 @@ $dark-font-color: #212121;
 $accent-font-color: #CA9CE1;
 $light-font-color: #fff;
 $text-overlay-color: #000;
-$text-overlay-opacity: 0.4;
+$text-overlay-opacity: 0.6;
 
 //transitions and mixins
 
@@ -172,17 +172,24 @@ body {
   
   .flexbox-slide {
     @include transition-mix($duration: .3s);
+    
+    .text-block {
+      bottom: 60px;
+    }
   }
   
   &:hover {
     
-    .flexbox-slide:not(:hover) {
-      
-    }
-    
     .flexbox-slide:hover {
       flex-shrink: 0;
       width: 80%;
+      
+      .text-block {
+        @include transition-mix($delay: .5s);
+        bottom: 30px;
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 }
