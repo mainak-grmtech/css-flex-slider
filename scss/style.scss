@@ -251,3 +251,39 @@ body {
     }
   }
 }
+
+/* effect 3 styles */
+.flexbox-slider.flexbox-slider-3 {
+  
+  .flexbox-slide {
+    
+    &:after {
+      transform: scale(.5);
+      transform-origin: center center;
+    }
+    
+    .text-block {
+      transform: rotate(-20deg);
+    }
+  }
+  
+  &:hover {
+    
+    .flexbox-slide:hover {
+      
+      &:after {
+        @include transition-mix($delay: .4s);
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .text-block {
+        @include transition-mix($delay: .6s);
+        transform: rotate(0deg);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

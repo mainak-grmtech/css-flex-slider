@@ -210,3 +210,43 @@ body {
   opacity: 1;
   visibility: visible;
 }
+
+/* effect 3 styles */
+.flexbox-slider.flexbox-slider-3 .flexbox-slide:after {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.flexbox-slider.flexbox-slider-3 .flexbox-slide .text-block {
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+.flexbox-slider.flexbox-slider-3:hover .flexbox-slide:hover:after {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.flexbox-slider.flexbox-slider-3:hover .flexbox-slide:hover .text-block {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  opacity: 1;
+  visibility: visible;
+}
