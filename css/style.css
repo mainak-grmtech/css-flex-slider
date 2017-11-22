@@ -286,3 +286,35 @@ body {
   opacity: 1;
   visibility: visible;
 }
+
+/* effect 5 styles */
+.flexbox-slider.flexbox-slider-5 .flexbox-slide .text-block {
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+}
+.flexbox-slider.flexbox-slider-5:hover .flexbox-slide:hover .text-block {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.flexbox-slider.flexbox-slider-5:hover .flexbox-slide:hover:after {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+  opacity: 1;
+  visibility: visible;
+}

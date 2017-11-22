@@ -325,3 +325,33 @@ body {
     }
   }
 }
+
+/* effect 5 styles */
+.flexbox-slider.flexbox-slider-5 {
+  
+  .flexbox-slide {
+    
+    .text-block {
+      transform: scale(.85);
+    }
+  }
+  
+  &:hover {
+    
+    .flexbox-slide:hover {
+      
+      .text-block {
+        @include transition-mix($delay: .7s);
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      &:after {
+        @include transition-mix($delay: .4s);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
