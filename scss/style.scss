@@ -287,3 +287,41 @@ body {
     }
   }
 }
+
+/* effect 4 styles */
+.flexbox-slider.flexbox-slider-4 {
+  
+  .flexbox-slide {
+    
+    &:after {
+      top: -100%;
+    }
+    
+    .text-block {
+      transform: scale(1.2);
+    }
+  }
+  
+  &:hover {
+    
+    .flexbox-slide:not(:hover) {
+      
+      &:after {
+        @include transition-mix;
+        top: 0;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    
+    .flexbox-slide:hover {
+      
+      .text-block {
+        @include transition-mix($delay: .5s);
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

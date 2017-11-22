@@ -250,3 +250,39 @@ body {
   opacity: 1;
   visibility: visible;
 }
+
+/* effect 4 styles */
+.flexbox-slider.flexbox-slider-4 .flexbox-slide:after {
+  top: -100%;
+}
+.flexbox-slider.flexbox-slider-4 .flexbox-slide .text-block {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.flexbox-slider.flexbox-slider-4:hover .flexbox-slide:not(:hover):after {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.flexbox-slider.flexbox-slider-4:hover .flexbox-slide:hover .text-block {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
